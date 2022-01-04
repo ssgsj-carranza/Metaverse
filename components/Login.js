@@ -2,7 +2,7 @@
 
 function Login() {
     return (
-        <div>
+        <div className="bg-black relative text-white">
             <h1>Login</h1>        
         </div>
     )
