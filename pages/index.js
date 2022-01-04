@@ -16,3 +16,6 @@ export default function Home() {
     </div>
   )
 }
+
+
+// npm install react-moralis
