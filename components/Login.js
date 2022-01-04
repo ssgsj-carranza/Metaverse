@@ -9,10 +9,12 @@ function Login() {
                 {/* login button */}
             </div>
 
-            <div>
+            <div className="w-full h-screen">
                 {/* background image */}
                 <Image 
                     src='https://links.papareact.com/55n'
+                    layout='fill'
+                    objectFit="cover"
                 />
             </div>        
         </div>
