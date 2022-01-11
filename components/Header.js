@@ -18,7 +18,7 @@ function Header() {
                 </div>
                 
                 <div>
-                    <div>
+                    <div className='relative h-48 w-48 lg:mx-auto border-pink-500 border-8 rounded-full'>
                         <Avatar logoutOnPress />        
                     </div>
                     {/* welcome message */}
