@@ -6,7 +6,7 @@ import Avatar from "./Avatar";
 function Header() {
     const {user} = useMoralis();
     return (
-        <div>
+        <div className="text-pink-500">
             <div className="">
                 <div className="relative h-24 w-24 mx-auto hidden lg:inline-grid">
                     <Image
@@ -21,7 +21,8 @@ function Header() {
                     <div className='relative h-48 w-48 lg:mx-auto border-pink-500 border-8 rounded-full'>
                         <Avatar logoutOnPress />        
                     </div>
-                    {/* welcome message */}
+                    <h1 className='text-3xl'>Welcome to the METAVERSE</h1>
+                    <h2>{user.getUsername()}</h2>
                     {/* username */}
 
                     {/* change username */}
