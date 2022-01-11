@@ -1,6 +1,10 @@
 import Image from "next/image";
+import { useMoralis } from 'react-moralis';
 
 function Login() {
+    //metamask login
+    const {authenticate} = useMoralis();
+
     return (
         <div className="bg-black relative">
             <h1>Login</h1>
@@ -13,7 +17,7 @@ function Login() {
                     width={200}
                 />
                 {/* login button */}
-                <button className="bg-purple-400 rounded-lg p-5 font-bold animate-pulse">Login into Metaverse</button>
+                <button onClick={authenticate} className="bg-purple-400 rounded-lg p-5 font-bold animate-pulse">Login into Metaverse</button>
             </div>
 
             <div className="w-full h-screen">

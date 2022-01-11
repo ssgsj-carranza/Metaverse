@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Login from '../components/Login'
+import { useMoralis } from 'react-moralis';
 
 export default function Home() {
-  const isAuthenticated = false;
-
+  const {isAuthenticated} = useMoralis();
+  
   if (!isAuthenticated) return <Login />
 
   return (
@@ -19,3 +20,5 @@ export default function Home() {
 
 
 // npm install react-moralis
+// npm install moralis
+// npm install @walletconnect/web3-provider
