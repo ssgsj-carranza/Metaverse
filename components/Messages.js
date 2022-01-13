@@ -14,7 +14,7 @@ function Messages() {
                 {/* messages render */}
             </div>
 
-            <div className=''>
+            <div className='flex justify-center'>
                 <SendMessage />
             </div>
 
