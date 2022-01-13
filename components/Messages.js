@@ -1,4 +1,5 @@
 import {ByMoralis, useMoralis, useMoralisQuery} from 'react-moralis';
+import SendMessage from './SendMessage';
 
 function Messages() {
     const {user} = useMoralis();
@@ -13,11 +14,11 @@ function Messages() {
                 {/* messages render */}
             </div>
 
-            <div>
-                {/* <SendMessage /> */}
+            <div className=''>
+                <SendMessage />
             </div>
 
-            <div>
+            <div className='text-center text-gray-400 mt-5'>
                 <p>You're up to date {user.getUsername()}! 🎉</p>
             </div>
             
