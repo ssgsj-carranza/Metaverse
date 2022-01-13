@@ -1,8 +1,13 @@
-
+import {ByMoralis, useMoralis, useMoralisQuery} from 'react-moralis';
 
 function Messages() {
+
+
     return (
-        <div>
+        <div className="pb-56">
+            <div className="my-5">
+                <ByMoralis variant='dark' style={{marginLeft:'auto', marginRight:'auto'}} />
+            </div>
             <h1>Mesages</h1>        
         </div>
     )
