@@ -10,7 +10,7 @@ function Message({message}) {
 
     return (
         <div className={`flex items-end space-x-2 relative ${isUserMessage && 'justify-end'}`}>
-            <div className='relative h-8 w-8'>
+            <div className={`relative h-8 w-8 ${isUserMessage && 'order-last ml-2'}`}>
                 <Avatar username={message.get('username')} />
             </div>
             
@@ -19,6 +19,10 @@ function Message({message}) {
                 : 'rounded-bl-none bg-blue-400'}`}>
                 <p>{message.get('message')}</p>
             </div>
+            {/* timestamp */}
+            <p className={`absolute -bottom-5 text-xs ${isUserMessage ? 'text-pink-300' : 'text-blue-400'}`}>
+                {message.get('username')}
+            </p>
         </div>
     )
 }
