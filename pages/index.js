@@ -32,3 +32,4 @@ export default function Home() {
 // npm install react-moralis
 // npm install moralis
 // npm install @walletconnect/web3-provider
+// npm install timeago-react
