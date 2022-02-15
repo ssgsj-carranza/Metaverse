@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {useMoralis} from 'react-moralis';
 
-function SendMessage() {
+function SendMessage({endOfMessagesRef}) {
     const {user, Moralis} = useMoralis();
     const [message, setMessage] = useState('');
 
@@ -19,7 +19,14 @@ function SendMessage() {
             message: message,
             username: user.getUsername(),
             ethAdress: user.get('ethAddress')
-        })
+        }).then((message) => {
+            //Object was saved successfully
+        },
+        (error) => {
+            //Saved file failed
+            console.log(error.message)
+        });
+        endOfMessagesRef.current.scrollIntoView({behavior: 'smooth'});
     };
 
     return (
