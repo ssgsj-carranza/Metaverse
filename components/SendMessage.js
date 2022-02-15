@@ -27,6 +27,7 @@ function SendMessage({endOfMessagesRef}) {
             console.log(error.message)
         });
         endOfMessagesRef.current.scrollIntoView({behavior: 'smooth'});
+        setMessage('');
     };
 
     return (
