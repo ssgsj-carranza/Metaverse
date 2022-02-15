@@ -8,10 +8,15 @@ const MINS_DURATION = 15;
 function Messages() {
     const {user} = useMoralis();
     const endOfMessagesRef = useRef(null);
+    //Real time listener below
     const {data, loading, error} = useMoralisQuery(
         'Messages',
-        (query) => query.ascending('createdAt').greaterThan('createdAt', new Date(Date.now() - 1000 * 60 * MINS_DURATION))
+        (query) => query.ascending('createdAt').greaterThan('createdAt', new Date(Date.now() - 1000 * 60 * MINS_DURATION)),
+        [],{
+            live: true,
+        }
     );
+    console.log(data);
 
     return (
         <div className="pb-56">
